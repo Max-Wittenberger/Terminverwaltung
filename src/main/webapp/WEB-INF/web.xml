@@ -62,9 +62,9 @@
     -->
     <security-role>
         <description>
-            Ein Benutzer der jTodo-Beispielanwendung. Jeder Benutzer muss
+            Ein Benutzer der Terminverwaltung. Jeder Benutzer muss
             mindestens diese Rolle besitzen, um sich einloggen und neue
-            Aufgaben anlegen zu können.
+            Termine anlegen zu können.
         </description>
         <role-name>app-user</role-name>
     </security-role>

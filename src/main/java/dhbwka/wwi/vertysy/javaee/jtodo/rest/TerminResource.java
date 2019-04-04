@@ -22,27 +22,27 @@ import javax.ws.rs.core.MediaType;
  * @author maxwi
  */
 
-@Path("Songs")
+@Path("app/rest/Termin")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class TerminResource {
 
     @EJB
-    private TaskBean taskBean;
+    TaskBean taskBean;
 
 // <editor-fold defaultstate="collapsed" desc="Zugriff auf die Collection">
     /**
-     * GET /api/Songs/List/
+     * GET /app/Termin/List/
      * Auslesen einer Liste von Musikstücken.
      * @return 
      */
     @GET
-    public List<Termin> findSongs() {
+    public List<Termin> findTermine() {
         return this.taskBean.findAll();
     }
 
     /**
-     * POST /api/Songs/
+     * POST /api/Termin/
      * Speichern eines neuen Songs.
      * @param termin
      */

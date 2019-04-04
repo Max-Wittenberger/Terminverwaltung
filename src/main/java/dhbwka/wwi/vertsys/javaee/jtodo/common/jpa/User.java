@@ -164,7 +164,7 @@ public class User implements Serializable {
     //<editor-fold defaultstate="collapsed" desc="Zuordnung zu Benutzergruppen">
     /**
      * @return Eine unveränderliche Liste aller Benutzergruppen
-     */
+     
     public List<String> getGroups() {
         List<String> groupsCopy = new ArrayList<>();
 
@@ -173,7 +173,7 @@ public class User implements Serializable {
         });
 
         return groupsCopy;
-    }
+    }*/
 
     /**
      * Fügt den Benutzer einer weiteren Benutzergruppe hinzu.
