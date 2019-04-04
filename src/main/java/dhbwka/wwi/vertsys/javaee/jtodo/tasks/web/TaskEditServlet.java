@@ -79,7 +79,7 @@ request.setCharacterEncoding("UTF-8");
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-request.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
         // Angeforderte Aktion ausführen
         String action = request.getParameter("action");
 
