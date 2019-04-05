@@ -51,9 +51,9 @@
                 <jsp:invoke fragment="menu"/>
 
                 <c:if test="${not empty pageContext.request.userPrincipal}">
-                       <div class="menuitem">
+                        <div class="menuitem">
             <a href="<c:url value="/app/settings/"/>">Einstellungen</a>
-        </div>
+                        </div>
                     <div class="menuitem">
                         <a href="<c:url value="/app/rest/"/>" > Rest </a>
                         <a class="logout" href="<c:url value="/logout/"/>" class="icon-logout">Logout ${pageContext.request.userPrincipal.name}</a>

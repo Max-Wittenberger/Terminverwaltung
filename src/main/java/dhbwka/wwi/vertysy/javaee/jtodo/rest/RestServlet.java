@@ -28,7 +28,7 @@ import javax.servlet.http.HttpSession;
  * Seite zum Anlegen oder Bearbeiten einer Aufgabe.
  */
 @WebServlet(urlPatterns = "/app/rest/")
-public class TaskEditServlet extends HttpServlet {
+public class RestServlet extends HttpServlet {
 
     @EJB
     TaskBean taskBean;
@@ -56,19 +56,37 @@ request.setCharacterEncoding("UTF-8");
 
     }
 
+    /**
+     *
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         // Angeforderte Aktion ausführen
         String action = request.getParameter("action");
-
-        if (action == null) {
-            action = "";
-        }
-
-     
-    }
+        String id = request.getParameter("id");
+        String text = request.getParameter("text");
+        String status = request.getParameter("status");
+        
+        
+        String url =  "/app/rest/Termin/?query=";
+        
+       if("getStatus".equals(action)){
+           url = url + status;
+       }
+        if("getText".equals(action)){
+           url = url + text;
+       }
+         if("getId".equals(action)){
+           url = url + id;
+       }
+         response.sendRedirect(WebUtils.appUrl(request, url));
+}
 
 
 }

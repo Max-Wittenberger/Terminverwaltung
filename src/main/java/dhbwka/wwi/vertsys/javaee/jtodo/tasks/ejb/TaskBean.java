@@ -43,6 +43,21 @@ public class TaskBean extends EntityBean<Termin, Long> {
                  .getResultList();
     }
     
+     public List<Termin> findByQuery(String query) {
+        if (query == null || query.trim().isEmpty()) {
+            query = "";
+        }
+        
+        query = "%" + query + "%";
+
+        return em.createQuery("SELECT s FROM Termin s"
+                            + "    WHERE s.shortText        LIKE :query"
+                            + "       OR s.longText         LIKE :query"
+                            + "       OR s.status           LIKE :query")
+                .setParameter("query", query)
+                .getResultList();
+    }
+    
     /**
      * Suche nach Aufgaben anhand ihrer Bezeichnung, Kategorie und Status.
      * 
