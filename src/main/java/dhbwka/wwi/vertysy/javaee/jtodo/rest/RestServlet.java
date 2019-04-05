@@ -74,13 +74,13 @@ request.setCharacterEncoding("UTF-8");
         String status = request.getParameter("status");
         
         
-        String url =  "/app/rest/Termin/?query=";
+        String url =  "/app/rest/Termin/";
         
        if("getStatus".equals(action)){
-           url = url + status;
+           url = url + "?query=" + status;
        }
         if("getText".equals(action)){
-           url = url + text;
+           url = url + "?query=" +  text;
        }
          if("getId".equals(action)){
            url = url + id;

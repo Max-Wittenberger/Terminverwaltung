@@ -50,10 +50,10 @@ public class TaskBean extends EntityBean<Termin, Long> {
         
         query = "%" + query + "%";
 
-        return em.createQuery("SELECT s FROM Termin s"
-                            + "    WHERE s.shortText        LIKE :query"
-                            + "       OR s.longText         LIKE :query"
-                            + "       OR s.status           LIKE :query")
+        return em.createQuery("SELECT t FROM Termin t"
+                            + "    WHERE t.shortText        LIKE :query"
+                            + "       OR t.longText         LIKE :query")
+                            
                 .setParameter("query", query)
                 .getResultList();
     }

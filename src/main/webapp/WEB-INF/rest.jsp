@@ -25,6 +25,7 @@
     <jsp:attribute name="content">
         <form method="post" class="stacked">
               <input type="hidden" name="csrf_token" value="${csrf_token}">
+              
         <table class="bb">
         <tr>
                 <td>
@@ -37,8 +38,9 @@
                     <a href="Termin/">Termin/</a>
                 </td>
             </tr>
-  
-            <br>
+        </table>
+        <table class="bb">
+            
              <tr>
                 <td>
                     Datensatz mit Id 100 auslesen
@@ -63,6 +65,19 @@
                     <button name="action" value="getId"> GET </button>
                 </td>
             </tr>
+           </table>
+        <table class="bb">
+             <tr>
+                <td>
+                    Datensatz Terminname/bezeichnung mit Inhalt a auslesen
+                </td>
+                <td class="verb">
+                    GET
+                </td>
+                <td>
+                    <a href="Termin/?query=a">Termin/?query=a</a>
+                </td>
+            </tr>
                <br>
              <tr>
                 <td>
@@ -77,22 +92,7 @@
                 </td>
             </tr>
         
-               <tr>
-                <td>
-                    Datensatz mit gewünschtem Status auslesen
-                </td>
-                <td class="verb">
-                    GET
-                </td>
-                <td>
-                    <select name="status">
-                        <option value="OPEN">Offen</option>
-                        <option value="FINISHED">Erledigt</option>
-                        <option value="CANCELED">Abgesagt</option>
-                    </select>
-                    <button name="action" value="getStatus"> GET </button>
-                </td>
-            </tr>
+              
             </table>
             </form>
     </jsp:attribute>
