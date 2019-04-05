@@ -49,7 +49,12 @@ public class User implements Serializable {
     @NotNull(message = "Der Benutzername darf nicht leer sein.")
     private String username;
     
+    @NotNull(message = "Das Vorname darf nicht leer sein.")
+     @Size(min = 2, max = 64, message = "Der Vorname muss zwischen zwei und 64 Zeichen lang sein.")
     private String vorname;
+    
+    @NotNull(message = "Das Nachname darf nicht leer sein.")
+     @Size(min = 2, max = 64, message = "Der Nachname muss zwischen zwei und 64 Zeichen lang sein.")
     private String nachname;
     
     public class Password {
