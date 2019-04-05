@@ -79,7 +79,6 @@ public class SettingsServlet extends HttpServlet {
         
         if (errors.isEmpty()) {
             // Keine Fehler: Startseite aufrufen
-            //request.login(username, password1);
             this.userBean.update(currentUser);
             response.sendRedirect(WebUtils.appUrl(request, "/app/dashboard/"));
         } else {
@@ -89,7 +88,7 @@ public class SettingsServlet extends HttpServlet {
             formValues.setErrors(errors);
             
             HttpSession session = request.getSession();
-            session.setAttribute("signup_form", formValues);
+            session.setAttribute("errors", errors);
             
             response.sendRedirect(request.getRequestURI());
         }

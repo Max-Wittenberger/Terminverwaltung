@@ -9,7 +9,7 @@
 
 <template:base>
     <jsp:attribute name="title">
-        Einstellungen
+        Rest
     </jsp:attribute>
 
     <jsp:attribute name="head">

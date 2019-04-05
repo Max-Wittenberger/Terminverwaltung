@@ -54,8 +54,11 @@
                         <div class="menuitem">
             <a href="<c:url value="/app/settings/"/>">Einstellungen</a>
                         </div>
+                             <div class="menuitem">
+                         <a href="<c:url value="/app/rest/"/>" > Rest </a>
+                    </div>
                     <div class="menuitem">
-                        <a href="<c:url value="/app/rest/"/>" > Rest </a>
+                        
                         <a class="logout" href="<c:url value="/logout/"/>" class="icon-logout">Logout ${pageContext.request.userPrincipal.name}</a>
                     </div>
                 </c:if>
